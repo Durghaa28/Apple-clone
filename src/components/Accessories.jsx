@@ -2,8 +2,9 @@ import { FaPlusCircle } from "react-icons/fa";
 
 function Accessories() {
   return (
-    <section className="px-5 md:px-20 py-6 overflow-x-auto no-scrollbar bg-gray-100 pb-10" >
-    <h1 className="text-neutral-500 text-xl text-center md:text-start md:text-3xl font-semibold py-6 bg-gray-100"><span className="text-black">Accessories. </span>Essentials that pair perfectly with your favourite devices.</h1>
+    <div>
+          <h1 className="px-5 md:px-20 text-neutral-500 text-xl text-center md:text-start md:text-3xl font-semibold py-6 bg-gray-100"><span className="text-black">Accessories. </span>Essentials that pair perfectly with your favourite devices.</h1>
+          <section className="px-5 md:px-20 py-6 overflow-x-auto no-scrollbar bg-gray-100 pb-10" >
 
       <div className="flex gap-5 w-max">
         {[
@@ -17,7 +18,7 @@ function Accessories() {
           <div
             key={i}
             className="h-96 w-72 bg-cover bg-center rounded-lg relative shrink-0"
-            style={{ backgroundImage: `url(${item.img})` }}
+            style={{ backgroundImage: `url(/${item.img})` }}
           >
             <div
               className={`absolute bottom-0 w-full backdrop-blur-sm p-4 ${
@@ -31,6 +32,8 @@ function Accessories() {
         ))}
       </div>
     </section>
+    </div>
+    
   );
 }
 
